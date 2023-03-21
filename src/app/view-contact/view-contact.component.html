@@ -1,0 +1,42 @@
+<div class="container">
+    <!-- heading with content -->
+    <div class="row">
+        <div class="col">
+            <h1 class="text-warning text-center m-4">View Your Contact</h1>
+            <p style="text-align:justify">Contact management is the process of organizing and managing details about customers, leads, and prospects. Think of it as a cloud-based address book filled with contact information.
+
+                Some businesses rely on convoluted spreadsheets for their contact management needs. While this system might work for small startups, large companies will likely struggle to keep up with all their customer information using spreadsheets alone.
+                
+                Enter: contact management systems. They're invaluable for teams that conduct external communication. With these tools, businesses can automate the collection, storage, and management of contact data.</p>
+        </div>
+    </div>
+    <!-- form and image -->
+    <div class="container">
+        <div class="row">
+            <!-- form -->
+            <div class="col-6">
+                <!-- <pre>
+                    {{groupId|json}}
+                </pre> -->
+                <!-- <pre>
+                    {{groupName|json}} 
+                    complete ddata of contact
+                </pre> -->
+                <ul class="list-group mt-5">
+                    <h1>Contact Details</h1>
+                    <li class="list-group-item">Name:{{contact.name}}</li>
+                    <li class="list-group-item">Email:{{contact.email}}</li>
+                    <li class="list-group-item">Mobile no:{{contact.phone}}</li>
+                    <li class="list-group-item">Company Name:{{contact.company}}</li>
+                    <li class="list-group-item">Title:{{contact.titles}}</li>
+                    <li class="list-group-item">Group:{{groupName}}</li>
+                </ul>
+                <a routerLink="/" class="btn btn-success my-4">Go Back</a>
+            </div>
+            <!-- image -->
+            <div class="col-4">
+                <img class="img-icon" [src]="contact.photo" alt="">
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,46 @@
+<div class="container">
+    <!-- heading with content -->
+    <div class="row">
+        <div class="col">
+            <h1 class="text-warning text-center m-4">Add Your Contact</h1>
+            <p style="text-align:justify">Contact management is the process of organizing and managing details about customers, leads, and prospects. Think of it as a cloud-based address book filled with contact information.
+
+                Some businesses rely on convoluted spreadsheets for their contact management needs. While this system might work for small startups, large companies will likely struggle to keep up with all their customer information using spreadsheets alone.
+                
+                Enter: contact management systems. They're invaluable for teams that conduct external communication. With these tools, businesses can automate the collection, storage, and management of contact data.</p>
+        </div>
+    </div>
+    <!-- form and image -->
+    <div class="container">
+        <div class="row">
+            <!-- form -->
+            <!-- <pre>
+                {{contactId}}
+            </pre> -->
+            <!-- <pre>
+                {{contact|json}}
+            </pre> -->
+            <div class="col-6">
+                <form class="border border-2 p-5 rounded-5">
+                    <input [(ngModel)]="contact.id" name="contactId" type="text" placeholder="Enter Contact Id" class="form-control mb-2">
+                    <input [(ngModel)]="contact.name" name="contactName" type="text" placeholder="Enter Contact Name" class="form-control mb-2">
+                    <input [(ngModel)]="contact.photo" name="contactPhoto" type="text" placeholder="Enter Contact Photo URL" class="form-control mb-2">
+                    <input [(ngModel)]="contact.email" name="contactEmail" type="text" placeholder="Enter Contact Email" class="form-control mb-2">
+                    <input [(ngModel)]="contact.phone" name="contactPhone" type="text" placeholder="Enter Contact Mobile Number" class="form-control mb-2">
+                    <input [(ngModel)]="contact.company" name="contactCompany" type="text" placeholder="Enter Contact Company Name" class="form-control mb-2">
+                    <input [(ngModel)]="contact.titles" name="contactTitle" type="text" placeholder="Enter Contact Title" class="form-control mb-2">
+                    <select [(ngModel)]="contact.groupId" class="form-control mb-2">
+                        <option value=""selected hidden disabled>Select</option>
+                        <option value="{{group.id}}" *ngFor="let group of allGroups">{{group.name}}</option>
+                    </select>
+                    <input (click)="addContact()" type="button" value="Create" class="btn btn-success">
+                    <a routerLink="/" class="btn btn-danger mt-1" style="float: right;">Close</a>
+                </form>
+            </div>
+            <!-- image -->
+            <div class="col-4">
+                <img class="img-icon" [src]="contact.photo" alt="">
+            </div>
+        </div>
+    </div>
+</div>

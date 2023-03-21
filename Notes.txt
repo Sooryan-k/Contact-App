@@ -1,0 +1,128 @@
+------------------Contact Management Sysytem-----------------------------------------------
+                Baasic Commands
+
+    1 Create a new projet-ng new contact_app
+    2 To run a project- ng serve --open
+    3 Create a new component - ng g c component_name
+    4 Create a service- ng g s service_name  
+    5 Create a pipe - ng g p pipe_foldername/pipe_name
+-------------------------------------------------------------------------------------------
+                Basic Building Blocks
+
+    1 Module- Used to add 3rd party libraries
+    2 Component- To create html pages(html,css.ts)
+    3 Selector- Used to replace the html corresponding to the component  
+    4 Services - Reusable codes that can be shared between components 
+    5 Asynchronous function rxjs 
+    6 Dependency Injection-Data share between two dependent classes
+
+-------------------------------------------------------------------------------------------
+                Contact Management Sysytem
+        
+    1 Create a new project- ng new contact_app
+    2 cd contact_app
+    3 code.
+    4 To run project - ng serve --open
+    5 Install bootstrap,fontawesome and google fonts 
+        ->npm i bootstrap
+        ->npm i @fortawesome/fontawesome-free
+    6 config bootstrap,fontawesome and google fontawesome in Angular.js
+    7 Create components
+        ->ContactManager-To view all contacts
+            ng g c contactManager
+        ->addContact- To add a new account
+            ng g c addContact
+        ->updateContact-To update a contact
+            ng g c updateContact
+        ->viewContact-To view all contacts
+            ng g c viewContact
+        ->Page_not_found
+        ->Navigation bar- ng g c navbar and design
+        ->contactManager-Page design
+        ->viewpage design
+        ->updatepage design
+        ->addpage design
+    8 API creation
+        create our own json file
+        go to jsonplaceholder site- create My json server
+    9 Create folder for backend
+        create server folder inside the project - src/server folder
+        create db.json file in server folder 
+        add our own content to the db.json file
+    10 in server folder create package.json and nodemodules
+        ->create package.json file - npm init
+        ->create json server - npm i json-server
+        ->npm start 
+
+            update package.json file script as
+                "scripts": {
+                            "start":"json-server --watch db.json --port 3000"
+                            },
+            ->npm start
+    11 Create Model for contact and group
+        create model folder in src folder 
+        create myContact.ts file
+        create myGroup.ts file
+    12 To fetch data- Asynchronous Resolving
+            JS                          TS
+        promise                     observable
+        fetch('url')                rxjs library
+        .then()---------------------.subscribe()
+    13 APIs creation
+            eg:view contact
+                update contact
+    14 Service creation
+        pass data from one component to another
+        if components share same data then we create service
+
+        ng g s services/api
+    15 To get http methods- get,post,put,patch,delete
+        import HttpClientModule in app.module.ts file
+    16 Dependency Inject httpClient in API services 
+
+    17 Data Binding
+        Data sharing inside a component
+
+        Html(view)-ts(component)
+        ts-html
+        1)One way dta Binding
+            a)component to view(ts->html)
+                i)String interpolation - {{variable_name}}
+                ii)Property Binding-[attribute]="property_name"
+
+            b) view(html)-component(ts)
+                i)Event Binding-(event)="function_name"
+                ii)Event Binding using $event-(event)="function_name($event)"
+        2)Two way data Binding
+            1)ngModel
+                -import FormsModule in appModule
+                -[(ngModel)]="property_name"
+
+    18 Directives-To manipulate DOM
+        1)Component directives
+        2)Structural directives- To add or remove html elements based on some conditions
+
+            i)*ngIf="conditions"
+            ii)*ngFor="let var_name of array_name"
+    
+    19 Activated route
+
+        Provides access to information about a route associated with a component that is loaded in an outlet. Use to traverse the RouterState tree and extract information from nodes.
+
+        params	Observable<Params>	//params-//method
+        An observable of the matrix parameters scoped to this route.
+    
+    20 Angular pipes- Transforming data using pipe
+        Use pipes to transform strings, currency amounts, dates, and other data for display
+
+        eg:date
+        create a pipe for searching
+        ng g p pipe_folder/pipe_name
+        ng g p pipes/filter
+    21 add contact,delete contact,update contact
+     
+
+
+
+
+

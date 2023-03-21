@@ -1,0 +1,61 @@
+<p>Login Details:{{loginDate| date:'medium'}}</p>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 class="text-warning text-center m-4">Contact Manager</h1>
+            <p style="text-align:justify">Contact management is the process of organizing and managing details about customers, leads, and prospects. Think of it as a cloud-based address book filled with contact information.
+
+                Some businesses rely on convoluted spreadsheets for their contact management needs. While this system might work for small startups, large companies will likely struggle to keep up with all their customer information using spreadsheets alone.
+                
+                Enter: contact management systems. They're invaluable for teams that conduct external communication. With these tools, businesses can automate the collection, storage, and management of contact data.</p>
+            <a routerLink="/contact/add" class="btn btn-warning p-2" style="float: right;"><i class="fa-solid fa-user-plus"></i>Add Contact</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <input (change)="search($event)" type="text" placeholder="Search Your contacts" class="form-control">
+        </div>
+        
+    </div>
+
+    <!-- <pre>
+        {{heading}}
+    </pre>
+    <pre>
+        {{allContacts | json}}
+    </pre> -->
+
+<!-- card designing -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6" *ngFor="let contact of allContacts | filter:searchKey:'name'">
+                <div class="card mt-5">
+                    <div class="card-body bg-secondary p-2">
+                        <div class="row">
+                            <div class="col-4 pt-4 ps-4">
+                                <!-- property binding -->
+                                <img  [src]="contact.photo" width="100px" alt="">
+                            </div>
+                            <div class="col-8 mt-3">
+                                <ul class="list-group">
+                                    <li class="list-group-item">Name:{{contact.name}}
+                                        <!-- view -->
+                                        <a routerLink="/contact/view/{{contact.id}}" style="float: right;" class="text-success"><i class="fa-solid fa-eye btn btn-success"></i></a>
+                                    </li>
+                                    <li class="list-group-item">Email:{{contact.email}}
+                                        <!-- Edit -->
+                                        <a routerLink="/contact/update/{{contact.id}}" style="float: right;"><i class="fa-solid fa-edit btn btn-primary"></i></a>
+                                    </li>
+                                    <li class="list-group-item">Mobile no:{{contact.phone}}
+                                        <!-- Delete -->
+                                        <button (click)="deleteContact(contact.id)" class="btn btn-danger" style="float: right;"><i class="fa-solid fa-trash"></i></button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

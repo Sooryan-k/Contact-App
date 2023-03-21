@@ -1,0 +1,48 @@
+{
+  "contacts": [
+    {
+      "id": "2",
+      "name": "Vijesh",
+      "email": "vijesh@gmail.com",
+      "phone": "9998999999",
+      "photo": "https://devitt-forand.com/wp-content/uploads/2018/05/person-icon.png",
+      "company": "zyx",
+      "titles": "HR",
+      "groupId": "2"
+    },
+    {
+      "id": "3",
+      "name": "Kripesh",
+      "email": "Kripesh@gmail.com",
+      "phone": "9999999999",
+      "photo": "https://devitt-forand.com/wp-content/uploads/2018/05/person-icon.png",
+      "company": "abc",
+      "titles": "Tester",
+      "groupId": "3"
+    },
+    {
+      "id": "4",
+      "name": "Sreerag",
+      "email": "sreerag@gmail.com",
+      "phone": "8888999999",
+      "photo": "https://devitt-forand.com/wp-content/uploads/2018/05/person-icon.png",
+      "company": "None",
+      "titles": "None",
+      "groupId": "1"
+    }
+  ],
+  "group": [
+    {
+      "id": "1",
+      "name": "family"
+    },
+    {
+      "id": "2",
+      "name": "company"
+    },
+    {
+      "id": "3",
+      "name": "friends"
+    }
+  ]
+}
